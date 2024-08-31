@@ -16,15 +16,14 @@ title: 按钮
 
 <hl-demo-button-text/>
 
-### 预设按钮
-
-> 为了统一样式，内置了几个按钮组件
-
-<hl-demo-button-type class="mt-2"/>
-
 ### 属性
 
-| 属性 | 说明         | 类型    | 可选值 | 默认值 |
-| ---- | ------------ | ------- | ------ | ------ |
-| icon | 是否展示图标 | Boolean | —      | false  |
-| text | 按钮文字     | String  | —      | —      |
+| 属性        | 说明                                          | 类型    | 可选值                          | 默认值  |
+| ----------- | --------------------------------------------- | ------- | ------------------------------- | ------- |
+| button-type | 按钮样式                                      | String  | button-按钮 icon-图标 text-文字 | button  |
+| icon        | 设置图标，button-type为button、icon时有效，   | String  | —                               | —       |
+| size        | 图标大小                                      | Number  | —                               | 18      |
+| show-icon   | button-type为button且配置了icon，控制图标显示 | Boolean | —                               | true    |
+| text        | 按钮文字或鼠标悬浮提示                        | String  | —                               | —       |
+| placement   | button-type为icon时，鼠标悬浮提示的位置       | String  | 取值同el-tooltip                | top     |
+| type        | 类型                                          | String  | 取值同el-button                 | primary |

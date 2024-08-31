@@ -1,8 +1,6 @@
 import { defineConfig } from 'vitepress'
 import AutoImport from 'unplugin-auto-import/vite'
 import tailwindcss from 'tailwindcss'
-import postcssPresetEnv from 'postcss-preset-env'
-import postcssFlexbugsFixes from 'postcss-flexbugs-fixes'
 import Components from 'unplugin-vue-components/vite'
 import useAlias from '../alias.config'
 
@@ -31,18 +29,11 @@ export default defineConfig({
             type: 'component',
             resolve: (name) => {
               if (name.startsWith('Hl')) {
-                const pathName = name.slice(2).replace(/[A-Z]/g, (match, index) => {
-                  if (index > 0) {
-                    return `-${match.toLowerCase()}`
-                  }
-                  return match.toLowerCase()
-                })
                 return {
                   name,
                   importName: name,
                   from: '@hl/ui',
-                  path: `@hl/ui`,
-                  sideEffects: `@hl/ui/src/components/${pathName}/Index.css`,
+                  path: `@hl/ui/index.js`,
                 }
               }
             },
@@ -54,13 +45,6 @@ export default defineConfig({
     css: {
       postcss: {
         plugins: [
-          postcssPresetEnv({
-            autoprefixer: {
-              overrideBrowserslist: ['Android 4.1', 'iOS 7.1', 'Chrome > 31', 'ff > 31', 'ie >= 8', '> 1%'],
-              grid: true,
-            },
-          }),
-          postcssFlexbugsFixes,
           tailwindcss,
         ],
       },
@@ -91,7 +75,6 @@ export default defineConfig({
         items: [{ text: 'Hl-UI', link: '/docs/web/hl-ui/home' }],
       },
     ],
-
     sidebar: {
       '/docs/web/hl-ui/': [
         {
@@ -99,6 +82,7 @@ export default defineConfig({
           items: [
             { text: '图标', link: '/docs/web/hl-ui/icon' },
             { text: '按钮', link: '/docs/web/hl-ui/button' },
+            { text: '预设按钮', link: '/docs/web/hl-ui/button-type' },
           ],
         },
         {

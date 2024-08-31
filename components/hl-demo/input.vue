@@ -1,20 +1,17 @@
 <script setup>
-const date = ref()
+const text = ref('')
 
 const code = `
 <template>
-  <hl-date v-model="date" />
+  <hl-input v-model="text" />
 </template>
-
 <script setup>
-  const date = ref();
+  const text = ref('')
 <\/script>`
 </script>
 
 <template>
   <custom-code-preview :code="code">
-    <hl-date v-model="date" />
+    <hl-input v-model="text" />
   </custom-code-preview>
 </template>
-
-<style lang="scss" scoped></style>
