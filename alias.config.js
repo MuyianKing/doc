@@ -1,21 +1,7 @@
 import { resolve } from 'node:path'
 
 const alias_path = [
-  ['@', './src'],
-  ['@api', './src/api'],
-  ['@comp', './src/components'],
-  ['@utils', './utils'],
-  ['@def', './src/default'],
-  ['@server', './src/server'],
-  ['@model', './src/model'],
-  ['@views', './src/views'],
-  ['@hooks', './src/hooks'],
-  ['@img', './src/assets/img'],
-  ['@data', './src/assets/data'],
-  ['@pinia', './src/pinia/modules'],
-  ['@style', './src/assets/style'],
-  ['@list-page', './src/components/hl/list-page'],
-  ['@layout', './src/layout'],
+  ['@app', './components/utils/app'],
 ]
 
 export default function useAlias() {

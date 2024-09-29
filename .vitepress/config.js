@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitepress'
-import AutoImport from 'unplugin-auto-import/vite'
 import tailwindcss from 'tailwindcss'
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vitepress'
 import useAlias from '../alias.config'
 
 const { alias_map } = useAlias()
@@ -88,12 +88,13 @@ export default defineConfig({
         {
           text: '表单组件',
           items: [
+            { text: '表单项', link: '/docs/web/hl-ui/form-item' },
             { text: '日期', link: '/docs/web/hl-ui/date' },
             { text: '文本框', link: '/docs/web/hl-ui/input' },
             { text: '下拉框', link: '/docs/web/hl-ui/select' },
             { text: '单选框', link: '/docs/web/hl-ui/radio' },
+            { text: '复选框', link: '/docs/web/hl-ui/checkbox' },
             { text: '上传', link: '/docs/web/hl-ui/upload' },
-            { text: '表单项', link: '/docs/web/hl-ui/form-item' },
           ],
         },
         {

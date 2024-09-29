@@ -4,7 +4,15 @@ const code = `
   <div class="flex items-center mt-4">
     <!-- 添加按钮 -->
     <hl-add-button />
+    <hl-add-button :icon="false" />
     <hl-add-button>创建</hl-add-button>
+  </div>
+
+  <div class="flex items-center mt-4">
+    <!-- 查询按钮 -->
+    <hl-search-button />
+    <hl-search-button :icon="false" />
+    <hl-search-button>搜索</hl-search-button>
   </div>
 
   <div class="flex items-center mt-4">

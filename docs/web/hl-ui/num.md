@@ -8,19 +8,11 @@ title: 数字
 
 ### 基础用法
 
-~~~vue
-<template>
-  <hl-num :num="num"/>
-</template>
-
-<script setup>
-const num = ref(99999999999)
-</script>
-~~~
+<hl-demo-num/>
 
 ### 属性
 
-| 属性        | 说明  | 类型  | 可选值| 默认值  |
-| ----------- | ------ | ------ | ------ | -------- |
-| num | 数字  | Number | —  | —   |
-| separator | 千分位分隔符  | Number | —  | ,  |
+| 属性      | 说明         | 类型   | 可选值 | 默认值 |
+| --------- | ------------ | ------ | ------ | ------ |
+| num       | 数字         | Number | —      | —      |
+| separator | 千分位分隔符 | Number | —      | ,      |

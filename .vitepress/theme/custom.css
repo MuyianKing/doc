@@ -80,3 +80,20 @@ header {
 .hl-button{
   text-decoration: none !important;
 }
+
+.hl-table table{
+  margin: 0 !important;
+  display: table;
+}
+
+.hl-table table th,
+.hl-table table td,
+.hl-table table tbody tr,
+.hl-table table thead tr{
+  border-top: 0 !important;
+  border-left: 0 !important;
+}
+
+.el-dialog{
+  padding: 0 !important;
+}

@@ -12,8 +12,9 @@ title: 输入框
 
 ### Placeholder
 
+> 当hl-input被hl-form-item包裹时，我们大部分情况下时不需要手动设置placeholder，组件会自动获取hl-form-item的label属性生成“请输入+hl-form-item的label”
+
 <hl-demo-input-placeholder/>
-- 被hl-form-item包裹的hl-input，大部分情况下是不需要手动设置placeholder的，会自动指定提示信息：请输入+hl-form_item的label
 
 ### 提示指引
 

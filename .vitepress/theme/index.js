@@ -1,26 +1,30 @@
-import DefaultTheme from 'vitepress/theme'
-import './custom.css'
-import './index.css'
-
+import { addAPIProvider } from '@iconify/vue'
 import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import 'element-plus/theme-chalk/dark/css-vars.css'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 
-import { addAPIProvider } from '@iconify/vue'
+import DefaultTheme from 'vitepress/theme'
 import customecomp from '../../components/custom/index'
 import hldemo from '../../components/hl-demo/index'
+import { BASE_URL, ICONIFY_API } from '../../components/utils/app'
+
+import './custom.css'
+import './index.css'
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 
 export default {
   ...DefaultTheme,
   enhanceApp({ app }) {
     addAPIProvider('', {
-      resources: ['http://192.168.10.106:28085/hualong/json/json'],
+      resources: [BASE_URL + ICONIFY_API],
     })
+
+    window.hl = {
+
+    }
 
     app.use(ElementPlus, {
       locale: zhCn,
-    }).use(customecomp)
-      .use(hldemo)
+    }).use(customecomp).use(hldemo)
   },
 }
