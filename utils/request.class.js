@@ -1,6 +1,6 @@
-import axios from 'axios'
-import { readBlobAsJSON } from '@utils/file'
 import { isTruth } from '@hl/utils/es/common'
+import { readBlobAsJSON } from '@hl/utils/es/file'
+import axios from 'axios'
 
 class RespError extends Error {
   constructor(error) {
@@ -34,8 +34,7 @@ export class Http {
       // 响应类型是blob类型吧却是json，需要转为json
       if (response.data instanceof Blob && response.data.type === 'application/json') {
         data = await readBlobAsJSON(response.data)
-      }
-      else {
+      } else {
         data = response.data
       }
 
@@ -45,15 +44,13 @@ export class Http {
 
       if (data.errno !== undefined && data.errno !== 200) {
         return Promise.reject(data)
-      }
-      else {
+      } else {
         if (response.config.keepHeader) {
           return Promise.resolve({
             data,
             headers: response.headers,
           })
-        }
-        else {
+        } else {
           return Promise.resolve(data)
         }
       }
@@ -70,8 +67,7 @@ export class Http {
         // 响应类型是blob
         if (error.response.data instanceof Blob) {
           data = await readBlobAsJSON(error.response.data)
-        }
-        else {
+        } else {
           data = error.response.data
         }
 
@@ -79,29 +75,11 @@ export class Http {
           errno: data.status || data.errno,
           error: data.error,
         })
-      }
-      else {
+      } else {
         resp_error = new RespError({
           errno: error?.response?.status || 999,
           error: error?.response?.statusText || error?.message || '程序出错或网络连接失败',
         })
-      }
-
-      // 认证失败：直接跳到登录
-      if (+resp_error.errno === 401) {
-        if (!window.location.href.includes('#/login')) {
-          let url = `#/login?msg=${encodeURIComponent(resp_error.error)}`
-          const user = {}
-          // 八小时内未操作直接跳到登录不提示登录过期：这里解决的是关闭页面
-          if (!user || (Date.now() - user.token_expire > 4 * 60 * 60 * 1000)) {
-            url = `#/login`
-          }
-
-          window.location.href = url
-          setTimeout(() => {
-            window.location.reload()
-          }, 500)
-        }
       }
       return Promise.reject(resp_error)
     })
@@ -112,9 +90,9 @@ export class Http {
         return this.interceptors.request(config)
       }
 
-      const user = useUserStore()
-      if (isTruth(user.token)) {
-        config.headers.token = user.token
+      const token = sessionStorage.getItem('TOKEN')
+      if (isTruth(token)) {
+        config.headers.token = token
       }
       return config
     })
@@ -170,7 +148,7 @@ export class Http {
       config.onUploadProgress = params.onProgress
     }
 
-    return this.instance.post(params.url || hl.api.upload, data, config)
+    return this.instance.post(params.url || '/file/upload', data, config)
   }
 
   /**
@@ -194,8 +172,7 @@ export class Http {
         params,
         responseType: 'blob',
       })
-    }
-    else {
+    } else {
       result = await this.instance.post(url, params, {
         headers: { 'Content-Type': 'application/json' },
         responseType: 'blob',

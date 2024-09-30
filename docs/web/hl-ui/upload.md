@@ -4,112 +4,95 @@ title: 上传
 
 ## 上传
 
-:::warning
-项目中不允许自己写任何上传组件，非要写必须和我商量
+:::warning 警告
+项目中不允许自己写任何上传组件，非要写必须讨论后再决定
 :::
 
 ### 基础用法
 
-<hl-demo-upload/>
+<hl-demo-upload />
 
-### v-model
+- 单选的初始值为null，多选的初始值为[]
 
-文件上传成功之后，后端会返回一个ID，这个ID对应了服务器上保存的文件资源；
-所以v-model绑定的也是这个ID，多选时为多个ID用逗号连接的字符串
+:::danger 这很重要
+上面的两个例子中无论是单选还是多选，最终上传的后端的是一个对象或者是对象数组，对象结构如下
 
-### 上传类型
-
-- 可以为组件设置type属性来指定文件上传类型，默认为文件，此属性为必传
-- 也可以设置suffix属性来指定文件后缀，所有可设置的后缀名可以查看@utils/file中的mime_type属性
-
-> 如果同时设置了type和suffix,取两者的交集
-
-### 自动上传
-
-- 默认不会自定上传，需要设置autoUpload为true
-- 上传过程中，loading为true表示正在上传，loading为false表示上传结束，如果需要显示正在上传，可以监听该属性
-
-### 自定义文件列表
-
-默认组件为每种文件类型都预设了文件列表的显示样式，如果不能满足需求，可以通过preview插槽自定义
-
-```vue
-<template>
-  <hl-upload v-model="picture" type="image">
-    <template #preview="{ files }">
-      <pre>{{ files }}</pre>
-    </template>
-  </hl-upload>
-</template>
-```
-
-files是包含了所有文件的数组，元素结构如下：
-
-```js
+<pre>
 {
-  uuid: '文件唯一ID',
-  name: '文件名',
-  src: '文件预览地址',
-  hover: '鼠标是否hover',
-  config: {
-    loading:"文件是否正在上传"
-  }
+  "id": "P1727665397346ph",
+  "name": "bg@2x.png",
+  "path": "2024/9/30/P1727665397346ph.png"
 }
-```
+</pre>
 
-### 自定义触发区域
+- 这个数据结构不允许改动，直接给后端，至于后端是存id还是将整个数据直接入库后端自己看着办<br/>
 
-```vue
-<template>
-  <hl-upload v-model="form.image" type="image" auto-upload>
-    <template #trigger>
-      <el-button type="primary">
-        上传
-      </el-button>
-    </template>
-  </hl-upload>
-</template>
-```
+- 但是我们回显或者修改表单数据时，我们需要的数据结构就是我们传给后端的，也就是说我们传给后端什么数据后端返给我们的也必须是一模一样的数据<br/>
 
-### 自定触发并且不需要展示列表
+- id、name、path三个字段已经定义，非特殊情况不允许擅自改动，也不允许自己兼容后端的字段，比如后端给的file_name，自己把file_name赋给name<br/>
 
-> 需求：选择一个文件上传，上传结束提示上传成功即可
+- 上传包括前端和后端截至目前（2024-09-30）已经形成一个规范，所有人必须遵循，后端不满足就让后端整改，前端也不允许擅自重新自定义上传相关组件，有特殊需求讨论决定方案
 
-在这个需求中，我们只需要设置一个上传按钮，点击选择文件并上传，文件上传成功后提示
+:::
 
-```vue
-<template>
-  <hl-upload v-model="file_ids" suffix="xlsx,xls" auto-upload custome @upload-finish="upLoad" @upload-error="handleError">
-    <hl-import-button />
-  </hl-upload>
-</template>
-```
+### 限制文件上传类型
 
-- custome：不显示任何预设列表
-- upload-finish：自动上传文件结束事件
-- upload-error：上传出错事件
-- default插槽为触发区域内容
+<hl-demo-upload-type/>
+
+### 限制文件上传数量
+
+<hl-demo-upload-count/>
++ 最少上传：hl-upload本身无法配置最少上传数量，但是如果是多选可以给hl-form-item指定min-count也是同样的效果
++ 最多上传：给hl-upload指定max-count即可
+
+### 上传配置
+
+<hl-demo-upload-auto/>
++ 自动上传：默认自动上传，也推荐全部采用自动上传；如果没有自动上传v-model绑定的数据格式不变，不同的是path变成了blob对象
++ 上传进度：建议将网络改为3G查看效果，默认关闭，但是组件本身也是带有loading效果的
+
+### 显示方式
+
+<hl-demo-upload-style/>
++ 预览样式：卡片样式和行布局样式很好理解，重点讨论一下自动样式；
+  + 自动样式目前只会根据配置的type和suffix来选择不同展示方式，一句话总结就是文件类型中只有图片和视频那么采用卡片样式，否则采用行布局样式；
+  + 当type=all时采用卡片布局
+  + 当文件类型中不包含图片、视频时推荐使用行布局，当文件中既有图片、视频，又有文件时推荐使用卡片样式
+
+### 自定义触发样式
+
+<hl-demo-upload-custom-trigger/>
+
+### 自定义预览样式
+
+<hl-demo-upload-preview/>
+
+:::info 提示
+自定义预览样式后原来组件自带的重新上传和删除功能需要自己实现，组件暴露了两个方法帮助实现：
+
+- handleReupload：重新上传
+- handleDel：删除
+  :::
 
 ### 属性
 
-| 属性                  | 说明                                                                          | 类型    | 可选值                 | 默认值 |
-| --------------------- | ----------------------------------------------------------------------------- | ------- | ---------------------- | ------ |
-| model-value / v-model | 选中项绑定值                                                                  | String  | —                      | —      |
-| type                  | 上传文件类型                                                                  | String  | video image file audio | file   |
-| suffix                | 上传文件后缀，多个逗号连接                                                    | String  | —                      | —      |
-| autoUpload            | 是否自动上传                                                                  | Boolean | —                      | false  |
-| multiple              | 是否多选                                                                      | Boolean | —                      | false  |
-| readonly              | 是否只读                                                                      | Boolean | —                      | false  |
-| loading               | 上传过程中loading为true                                                       | Boolean | —                      | false  |
-| height                | type为video时有效，设置video元素的高度                                        | String  | —                      | 100px  |
-| width                 | type为video时有效，设置video元素的宽度                                        | String  | —                      | auto   |
-| controls              | type为video时有效，是否显示video元素的控制条                                  | Boolean | —                      | false  |
-| custome               | 是否不需要预设列表，当custome为true时，需要设置默认插槽，否则没有区域触发上传 | Boolean | —                      | false  |
+| 属性                  | 说明                       | 类型           | 可选值                     | 默认值 |
+| --------------------- | -------------------------- | -------------- | -------------------------- | ------ |
+| model-value / v-model | 选中项绑定值               | Object、Array  | —                          | —      |
+| type                  | 上传文件类型               | String、 Array | video image file audio all | image  |
+| suffix                | 上传文件后缀               | String, Array  | —                          | —      |
+| autoUpload            | 是否自动上传               | Boolean        | —                          | false  |
+| multiple              | 是否多选                   | Boolean        | —                          | false  |
+| readonly              | 是否只读                   | Boolean        | —                          | false  |
+| maxCount              | 最大上传数量               | Number         | —                          | —      |
+| progress              | 是否显示上传进度条         | Boolean        | —                          | false  |
+| noPreview             | 不显示预览列表             | Boolean        | —                          | true   |
+| listType              | 预览列表样式，默认自动     | String         | card-卡片形式 line-行布局  | —      |
+| triggerType           | 触发样式，默认跟随listType | String         | card-卡片形式 line-行布局  | —      |
 
-### T插槽
+### 插槽
 
 | 插槽名  | 说明                                |
 | ------- | ----------------------------------- |
 | preview | 自定义显示列表，参数files，所有文件 |
-| trigger | 自定义触发区域                      |
-| default | 自定义触发区域，custome为true时有效 |
+| default | 自定义触发区域                      |

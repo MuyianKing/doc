@@ -1,7 +1,10 @@
 import { resolve } from 'node:path'
 
 const alias_path = [
-  ['@app', './components/utils/app'],
+  ['@', './'],
+  ['@http', './utils/request'],
+  ['@server', './server'],
+  ['@app', './utils/app'],
 ]
 
 export default function useAlias() {
