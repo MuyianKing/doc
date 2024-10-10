@@ -1,6 +1,5 @@
 import { BASE_URL, ICONIFY_API } from '@app'
 import { addAPIProvider } from '@iconify/vue'
-import { login } from '@server/tyyh'
 
 import ElementPlus from 'element-plus'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
@@ -19,14 +18,6 @@ export default {
     addAPIProvider('', {
       resources: [BASE_URL + ICONIFY_API],
     })
-
-    window.hl = {}
-
-    if (!sessionStorage.getItem('TOKEN')) {
-      login().then((data) => {
-        sessionStorage.setItem('TOKEN', data.token)
-      })
-    }
 
     app.use(ElementPlus, {
       locale: zhCn,

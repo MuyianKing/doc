@@ -1,5 +1,3 @@
-
-
 ### common.js
 
 > common.js 中定义了通用的方法，比较重要的有三个
@@ -42,9 +40,9 @@ echarts.util.js 做了以下几件事：
 ##### 使用
 
 ```js
-import echarts from '@utils/echarts.util';
+import echarts from '@utils/echarts.util'
 
-echarts.init(container, option, params); //返回Echarts实例对象
+echarts.init(container, option, params) // 返回Echarts实例对象
 ```
 
 - container：容器 id 或者是容器的 dom
@@ -66,5 +64,7 @@ echarts.init(container, option, params); //返回Echarts实例对象
 - loading(message, params)：封装了 ElLoading
   - message：loading 信息
   - params：ElLoading 的配置参数
+
+```
 
 ```

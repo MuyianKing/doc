@@ -9,11 +9,15 @@ const { alias_map } = useAlias()
 export default defineConfig({
   title: '华龙通信科技',
   description: '华龙前端技术开发文档',
+  base: '/doc/',
   vite: {
     resolve: {
       alias: {
         ...alias_map,
       },
+    },
+    ssr: {
+      noExternal: ['@hl/ui', '@hl/utils', 'validator', 'element-plus'],
     },
     plugins: [
       AutoImport({

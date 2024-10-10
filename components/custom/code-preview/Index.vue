@@ -1,9 +1,10 @@
 <script setup>
-import { ElMessage } from 'element-plus'
+import { login } from '@server/tyyh'
 import copy from 'copy-text-to-clipboard'
+import { ElMessage } from 'element-plus'
 
 import { codeToHtml } from 'shiki'
-import { watch } from 'vue'
+import { onMounted, watch } from 'vue'
 
 const props = defineProps({
   code: {
@@ -48,6 +49,14 @@ watch(() => props.code, async () => {
   })
 }, {
   immediate: true,
+})
+
+onMounted(() => {
+  if (!sessionStorage.getItem('TOKEN')) {
+    login().then((data) => {
+      sessionStorage.setItem('TOKEN', data.token)
+    })
+  }
 })
 </script>
 
