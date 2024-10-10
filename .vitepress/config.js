@@ -105,11 +105,9 @@ export default defineConfig({
           text: '数据展示',
           items: [
             { text: '表格', link: '/docs/web/hl-ui/table' },
+            { text: '附件', link: '/docs/web/hl-ui/preview' },
             { text: '数字', link: '/docs/web/hl-ui/num' },
             { text: '分页', link: '/docs/web/hl-ui/page' },
-            { text: '图片', link: '/docs/web/hl-ui/image' },
-            { text: '视频', link: '/docs/web/hl-ui/video' },
-            { text: '文件', link: '/docs/web/hl-ui/file' },
             { text: '时间', link: '/docs/web/hl-ui/time' },
             { text: '手机号', link: '/docs/web/hl-ui/tel' },
             { text: '身份证号', link: '/docs/web/hl-ui/id-card' },

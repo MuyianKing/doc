@@ -39,7 +39,7 @@ const customConfig = {
           多选
         </hl-block-title>
         <pre>{{ files }}</pre>
-        <hl-upload v-model="files" class="mt-2 ml-2" multiple />
+        <hl-upload v-model="files" class="mt-2 ml-2" multiple type="all" />
       </div>
     </hl-config-provider>
   </custom-code-preview>
