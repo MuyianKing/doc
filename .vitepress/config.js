@@ -106,6 +106,9 @@ export default defineConfig({
           items: [
             { text: '表格', link: '/docs/web/hl-ui/table' },
             { text: '附件', link: '/docs/web/hl-ui/preview' },
+            { text: '图片', link: '/docs/web/hl-ui/image' },
+            { text: '视频', link: '/docs/web/hl-ui/video' },
+            { text: '文件', link: '/docs/web/hl-ui/file' },
             { text: '数字', link: '/docs/web/hl-ui/num' },
             { text: '分页', link: '/docs/web/hl-ui/page' },
             { text: '时间', link: '/docs/web/hl-ui/time' },

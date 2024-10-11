@@ -1,36 +1,25 @@
 ---
 title: 文件
 ---
+
 ### 基本用法
-~~~vue
-<template>
-  <hl-file id="1"/>
-</template>
-~~~
 
-### 文件地址
-+ 指定文件Id
-组件会请求后台拿到文件的详细信息，再展示
+<hl-demo-file/>
 
-+ 指定文件
-可以设置file属性来指定文件，file是一个对象，结构如下
-~~~js
-{
-  file_id:"文件ID",
-  file_name:"文件名称",
-  file_path:"文件路径"
-}
-~~~
-通常情况下如果页面中只有一个文件，我们可以使用id设置地址，但是如果页面中有多个文件，比如列表页，如果使用id，组件会向后台发送多个请求，这样明显是不可取的，所以我们应j尽可能地使用file设置地址。
-
-+ 两个都指定，取file
+> 地址处理同[hl-image](/docs/web/hl-ui/image.html#图片地址)
 
 ### 下载
-组件默认单击下载，可以设置noDownload关闭下载
+
+组件默认单击下载，可以设置no-download取消下载
 
 ### 属性
-| 属性    | 说明   | 类型  | 可选值 | 默认值  |
-| ------- | ------ | ------| ------ | ------  |
-|  id   | 图片ID | Number, String |  —  |  —   |
-|  file   | 图片信息 | Object |  —    |  null  |
-|  noDownload | 是否禁止下载 | Boolean |  —  | false |
+
+| 属性       | 说明                   | 类型    | 可选值 | 默认值 |
+| ---------- | ---------------------- | ------- | ------ | ------ |
+| file       | 图片信息               | Object  | —      | null   |
+| card       | 是否采用卡片布局       | Boolean | —      | false  |
+| width      | 宽度，只对卡片样式有效 | string  | —      | 100px  |
+| height     | 高度，只对卡片样式有效 | string  | —      | 100px  |
+| noDownload | 是否禁止下载           | Boolean | —      | false  |
+
+> file字段要求同 [hl-preview](/docs/web/hl-ui/preview.html#%E5%B1%9E%E6%80%A7)的files
