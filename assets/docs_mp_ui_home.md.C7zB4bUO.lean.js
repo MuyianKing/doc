@@ -1,0 +1,1 @@
+import{ax as e,t,q as a}from"./chunks/framework.DRauMKQ-.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/mp/ui/home.md","filePath":"docs/mp/ui/home.md","lastUpdated":1723624027000}'),o={name:"docs/mp/ui/home.md"};function s(r,c,m,d,n,p){return a(),t("div")}const f=e(o,[["render",s]]);export{_ as __pageData,f as default};
