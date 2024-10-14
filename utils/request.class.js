@@ -1,3 +1,4 @@
+import { TOKEN } from '@app'
 import { isTruth } from '@hl/utils/es/common'
 import { readBlobAsJSON } from '@hl/utils/es/file'
 import axios from 'axios'
@@ -90,7 +91,7 @@ export class Http {
         return this.interceptors.request(config)
       }
 
-      const token = sessionStorage.getItem('TOKEN')
+      const token = TOKEN
       if (isTruth(token)) {
         config.headers.token = token
       }

@@ -59,20 +59,8 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '项目管理',
-        link: '/docs/projects/list',
-      },
-      {
-        text: '后端',
-        link: '/docs/interface/base',
-      },
-      {
         text: '开发规范',
         link: '/docs/rules/web/outline',
-      },
-      {
-        text: '小程序',
-        items: [{ text: '视讯通话', link: '/docs/mp/video/socket' }],
       },
       {
         text: '中后台',

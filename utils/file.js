@@ -1,4 +1,5 @@
-import { BASE_URL } from '@app'
+import { BASE_URL, TOKEN } from '@app'
+
 import { isTruth } from '@hl/utils/es/common'
 import { download, getBlobFromUrl } from '@hl/utils/es/file'
 
@@ -18,7 +19,7 @@ export function previewFileUrl(path, prefix = '') {
     return path
   }
 
-  const token = sessionStorage.getItem('TOKEN')
+  const token = TOKEN
 
   if (!path.startsWith('http')) {
     path = `${BASE_URL}${prefix.startsWith('/') ? '' : '/'}${prefix || 'preview'}${path.startsWith('/') ? path : `/${path}`}`

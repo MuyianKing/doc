@@ -50,14 +50,6 @@ watch(() => props.code, async () => {
 }, {
   immediate: true,
 })
-
-onMounted(() => {
-  if (!sessionStorage.getItem('TOKEN')) {
-    login().then((data) => {
-      sessionStorage.setItem('TOKEN', data.token)
-    })
-  }
-})
 </script>
 
 <template>
