@@ -63,11 +63,33 @@ export default defineConfig({
         link: '/docs/rules/web/outline',
       },
       {
+        text: '工具包',
+        items: [
+          { text: '@hl/utils', link: '/docs/utils/home' },
+        ],
+      },
+      {
         text: '中后台',
         items: [{ text: 'Hl-UI', link: '/docs/web/hl-ui/home' }],
       },
     ],
     sidebar: {
+      '/docs/utils': [
+        { text: '开始', link: '/docs/utils/home' },
+        {
+          text: 'common',
+          items: [
+            { text: 'isTruth', link: '/docs/utils/isTruth' },
+            { text: 'someInArray', link: '/docs/utils/someInArray' },
+            { text: 'guid', link: '/docs/utils/guid' },
+            { text: 'getLabelByVal', link: '/docs/utils/getLabelByVal' },
+            { text: 'jsonparse', link: '/docs/utils/jsonparse' },
+            { text: 'arrayUnion', link: '/docs/utils/arrayUnion' },
+            { text: 'firstUpcase', link: '/docs/utils/firstUpcase' },
+            { text: 'getCanUseValue', link: '/docs/utils/getCanUseValue' },
+          ],
+        },
+      ],
       '/docs/web/hl-ui/': [
         {
           text: '基础组件',
