@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: '华龙通信科技'
-  tagline: 前端技术开发文档
+  name: '华龙通信'
+  tagline: 前端物料文档
   image:
     src: /logo.png
 ---

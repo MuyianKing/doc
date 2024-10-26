@@ -7,8 +7,8 @@ import useAlias from '../alias.config'
 const { alias_map } = useAlias()
 
 export default defineConfig({
-  title: '华龙通信科技',
-  description: '华龙前端技术开发文档',
+  title: '华龙通信',
+  description: '前端物料文档',
   base: '/doc/',
   vite: {
     resolve: {
@@ -129,7 +129,9 @@ export default defineConfig({
         },
         {
           text: '反馈组件',
-          items: [],
+          items: [
+            { text: '悬浮菜单', link: '/docs/web/hl-ui/context-menu' },
+          ],
         },
         {
           text: '地图组件',
