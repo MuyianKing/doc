@@ -46,7 +46,7 @@ const list = ref([{
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-table :data="list" max-height="200px">
       <hl-table-column type="index" />
       <hl-table-column label="处置金额" prop="task_account" />

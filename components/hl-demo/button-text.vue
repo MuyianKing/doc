@@ -9,7 +9,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div style="display: flex;align-items: center;">
       <hl-button button-type="text" class="text-blue-400">
         测试

@@ -25,7 +25,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div>
       <div>时间范围：{{ date }}</div>
       <div>开始时间：{{ date_obj.start }}</div>

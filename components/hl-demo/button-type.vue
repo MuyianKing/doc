@@ -35,7 +35,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div class="flex items-center mt-4">
       <!-- 添加按钮 -->
       <hl-add-button />

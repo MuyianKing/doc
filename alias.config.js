@@ -8,7 +8,7 @@ const alias_path = [
 ]
 
 export default function useAlias() {
-  // 处理成vite许亚的格式
+  // 处理成vite需要的格式
   const alias_map = {}
   alias_path.forEach((item) => {
     alias_map[item[0]] = resolve(__dirname, item[1].replace('./', ''))

@@ -27,7 +27,7 @@ const sex = ref(1)
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-checkbox v-model="sex" :options line />
   </custom-code-preview>
 </template>

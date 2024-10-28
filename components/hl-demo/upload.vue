@@ -25,7 +25,7 @@ const customConfig = {
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-config-provider :custom-config>
       <div class="upload-wrapper">
         <hl-block-title class="leading-4">

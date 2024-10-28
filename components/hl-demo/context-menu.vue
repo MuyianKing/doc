@@ -44,7 +44,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div class="right-click-wrapper" @contextmenu.prevent="handleContextMenu">
       右击区域
     </div>

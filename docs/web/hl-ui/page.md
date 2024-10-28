@@ -1,35 +1,30 @@
---- 
+---
 title: 分页
 ---
 
 ### 基础用法
-~~~vue
-<template>
-   <hl-page :size="query.limit" :count="table.count" v-model:page="query.page" @change="getData" />
-</template>
 
-<script setup>
-const query = reactive({
-  limit:20,
-  page:1
-})
+<hl-demo-page/>
 
-const table = reactive({
-  count:0
-})
-function getData(){}
-</script>
- ~~~
+:::info 提示
 
- ### Page属性
-| 属性    | 说明   | 类型  | 可选值 | 默认值  |
-| ------- | ------ | ------| ------ | ------  |
-|  count   | 总条数 | Number |  —    |     0   |
-|  size   | 每页大小 | Number |  —    |    —   |
-|  page   | 当前页 | Number |  —    |     1   |
+- 组件默认在el-pagination基础上增加了分页信息，没有特殊情况一律使用hl-page
+- 分页场景有限，组件不对外提供太多的属性
 
+:::
+
+### Page属性
+
+| 属性                | 说明                                         | 类型    | 可选值 | 默认值 |
+| ------------------- | -------------------------------------------- | ------- | ------ | ------ |
+| model-value/v-model | 当前页                                       | Number  | —      | 1      |
+| count               | 总条数                                       | Number  | —      | 0      |
+| size                | 每页大小                                     | Number  | —      | —      |
+| sizes               | 显示每页条数选择，只有v-model:size时才会生效 | Boolean | —      | false  |
+| pager-count         | 设置最大页码按钮数                           | Number  | —      | 7      |
 
 ### 事件
-| 事件名 |    说明  |  回调参数 |
-| ------- | ------ | ------    |
-|change  | page发生变化时触发|(val: Number)|
+
+| 事件名 | 说明               | 回调参数      |
+| ------ | ------------------ | ------------- |
+| change | page发生变化时触发 | (val: Number) |

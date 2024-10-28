@@ -23,7 +23,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div>
       <div>开始时间：{{ date.start }}</div>
       <div>结束时间：{{ date.end }}</div>

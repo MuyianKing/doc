@@ -11,7 +11,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-input v-model="text" />
   </custom-code-preview>
 </template>

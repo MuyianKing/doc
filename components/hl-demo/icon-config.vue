@@ -11,7 +11,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div class="flex">
       <hl-icon icon="el:user" color="#f00" size="18px" class="mr-4" />
 

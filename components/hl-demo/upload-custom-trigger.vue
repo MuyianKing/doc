@@ -41,7 +41,7 @@ function handleFinish(row) {
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-config-provider :custom-config>
       <div>
         <hl-block-title title="自定义触发样式并保留预览" />

@@ -18,7 +18,7 @@ const list = ref([{
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-table :data="list">
       <hl-table-column type="index" />
       <hl-table-column label="处置金额" prop="task_account" />

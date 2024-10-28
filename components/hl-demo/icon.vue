@@ -7,7 +7,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <HlIcon icon="cryptocurrency-color:ppt" />
   </custom-code-preview>
 </template>

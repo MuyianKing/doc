@@ -12,7 +12,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-date v-model="date" />
   </custom-code-preview>
 </template>

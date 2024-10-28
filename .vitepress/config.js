@@ -92,11 +92,19 @@ export default defineConfig({
       ],
       '/docs/web/hl-ui/': [
         {
+          text: '配置组件',
+          items: [
+            { text: '全局配置', link: '/docs/web/hl-ui/config' },
+          ],
+        },
+        {
           text: '基础组件',
           items: [
             { text: '图标', link: '/docs/web/hl-ui/icon' },
+            { text: '图标选择', link: '/docs/web/hl-ui/icon-select' },
             { text: '按钮', link: '/docs/web/hl-ui/button' },
             { text: '预设按钮', link: '/docs/web/hl-ui/button-type' },
+            { text: '个性标题', link: '/docs/web/hl-ui/block-title' },
           ],
         },
         {
@@ -119,6 +127,7 @@ export default defineConfig({
             { text: '图片', link: '/docs/web/hl-ui/image' },
             { text: '视频', link: '/docs/web/hl-ui/video' },
             { text: '文件', link: '/docs/web/hl-ui/file' },
+            { text: '图表', link: '/docs/web/hl-ui/charts' },
             { text: '数字', link: '/docs/web/hl-ui/num' },
             { text: '分页', link: '/docs/web/hl-ui/page' },
             { text: '时间', link: '/docs/web/hl-ui/time' },
@@ -130,7 +139,8 @@ export default defineConfig({
         {
           text: '反馈组件',
           items: [
-            { text: '悬浮菜单', link: '/docs/web/hl-ui/context-menu' },
+            { text: '弹框', link: '/docs/web/hl-ui/dialog' },
+            { text: '右击菜单', link: '/docs/web/hl-ui/context-menu' },
           ],
         },
         {

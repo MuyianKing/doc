@@ -17,7 +17,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <!-- 自动获取placeholder -->
     <hl-form-item label="姓名">
       <hl-input v-model="text" />

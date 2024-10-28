@@ -24,7 +24,7 @@ const nowrap = ref(false)
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <el-switch v-model="nowrap" size="large" active-text="一行" inactive-text="多行" inline-prompt style="--el-switch-off-color:#13ce66" />
 
     <hl-table :data="list" :nowrap>

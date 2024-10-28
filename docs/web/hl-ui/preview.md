@@ -5,7 +5,7 @@ title: 上传
 ## 附件预览
 
 ::: warning 提醒
-hl-preview 可以展示所有的附件，建议优先使用hl-preview，在不方便或不满足需求的 情况下使用hl-image、hl-video、hl-file和自定义组件
+hl-preview 可以展示所有的附件，建议优先使用hl-preview，在不方便或不满足需求的情况下使用hl-image、hl-video、hl-file和自定义组件
 :::
 
 ::: danger 特别提醒

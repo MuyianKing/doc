@@ -31,7 +31,7 @@ const customConfig = {
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-config-provider :custom-config>
       <pre>{{ model.file }}</pre>
       <el-form>

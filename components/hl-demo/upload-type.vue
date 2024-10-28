@@ -43,7 +43,7 @@ const suffix = ref([])
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-config-provider :custom-config>
       <div>
         <hl-form-item label="文件类型：">

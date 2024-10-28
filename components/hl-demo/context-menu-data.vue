@@ -49,7 +49,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     {{ selected_data }}
     <div class="flex flex-wrap">
       <div v-for="item in 9" :key="item" class="click-item" @contextmenu.prevent="handleContextMenu(item)">

@@ -47,7 +47,7 @@ function handleDel(row) {
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-config-provider :custom-config>
       <hl-upload ref="upload_ref" v-model="upload_files" multiple trigger-type="line">
         <template #preview="{ files }">

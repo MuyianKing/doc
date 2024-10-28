@@ -29,7 +29,7 @@ const sex = ref(1)
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-form-item label="性别">
       <hl-select v-model="sex" :options readonly />
     </hl-form-item>

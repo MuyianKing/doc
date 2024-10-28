@@ -37,7 +37,7 @@ function submit() {
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <el-form ref="form_ref" :model="model" label-width="80">
       <hl-form-item label="姓名" prop="name" required>
         <hl-input v-model="model.name" />

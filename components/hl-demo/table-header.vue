@@ -29,7 +29,7 @@ const edit_header = ref(false)
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div class="text-right">
       <hl-button class="mb-2" @click="edit_header = true">
         定制表头

@@ -53,7 +53,7 @@ const card = ref(false)
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <hl-config-provider :custom-config>
       <hl-form-item label="卡片展示">
         <el-switch v-model="card" />

@@ -9,7 +9,7 @@ const code = `
 </script>
 
 <template>
-  <custom-code-preview :code="code">
+  <custom-code-preview :code>
     <div>
       <hl-number :num="998" />
       <hl-number :num="9998" />
