@@ -1,5 +1,31 @@
 <script setup>
-const code = ``
+const code = `
+<template>
+  <hl-button @click="show = true">
+    编辑
+  </hl-button>
+
+  <hl-form-dialog v-model="show" title="表单弹框" :model="form" :server>
+    <hl-form-item label="姓名" prop="name" required>
+      <hl-input v-model="form.name" />
+    </hl-form-item>
+    <hl-form-item label="手机号" prop="tel" required phone>
+      <hl-input v-model="form.tel" />
+    </hl-form-item>
+  </hl-form-dialog>
+</template>
+<script>
+  const show = ref(false)
+  const form = reactive({
+    name: '',
+    tel: '',
+  })
+
+  async function server() {
+    return true
+  }
+<\/script>
+`
 
 const show = ref(false)
 const form = reactive({
@@ -17,7 +43,6 @@ async function server() {
     <hl-button @click="show = true">
       编辑
     </hl-button>
-
     <hl-form-dialog v-model="show" title="表单弹框" :model="form" :server>
       <hl-form-item label="姓名" prop="name" required>
         <hl-input v-model="form.name" />

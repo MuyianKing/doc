@@ -143,6 +143,7 @@ export default defineConfig({
             { text: '右击菜单', link: '/docs/web/hl-ui/context-menu' },
             { text: '下拉菜单', link: '/docs/web/hl-ui/dropdown' },
             { text: '级联下拉', link: '/docs/web/hl-ui/dropdown-cascader' },
+            { text: '疑问提示', link: '/docs/web/hl-ui/question-icon' },
           ],
         },
         {
