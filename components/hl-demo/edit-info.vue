@@ -1,13 +1,19 @@
 <script setup>
 const code = `
 <template>
-
-<\/template>
+  <hl-edit-info v-model="text_value" @change="handleChange" />
+</template>
+<script>
+  const text_value = ref('')
+  function handleChange(val) {
+    console.log(val)
+  }
+<\/script>
 `
 
 const text_value = ref('')
-function handleChange() {
-  console.log('test')
+function handleChange(val) {
+  console.log(val)
 }
 </script>
 
@@ -19,6 +25,4 @@ function handleChange() {
   </custom-code-preview>
 </template>
 
-<style lang='scss' scoped>
-
-</style>
+<style lang='scss' scoped></style>

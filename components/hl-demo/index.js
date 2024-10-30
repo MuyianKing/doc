@@ -1,11 +1,11 @@
 export default {
   install(app) {
-    const globModules = import.meta.glob('./*.vue', { eager: true });
+    const globModules = import.meta.glob('./*.vue', { eager: true })
     for (const key in globModules) {
-      const name = /.\/(?<comp>.*).vue/.exec(key)?.groups.comp;
+      const name = /.\/(?<comp>.*).vue/.exec(key)?.groups.comp
       if (name) {
-        app.component(`hl-demo-${name}`, globModules[key].default);
+        app.component(`hl-demo-${name}`, globModules[key].default)
       }
     }
   },
-};
+}

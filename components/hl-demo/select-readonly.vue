@@ -16,7 +16,7 @@ const code = `
   </hl-form-item>
 </template>
 <script setup>
- const options = [{
+const options = [{
   label: '男',
   value: 1,
 }, {

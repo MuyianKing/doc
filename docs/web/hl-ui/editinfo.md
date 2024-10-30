@@ -2,37 +2,25 @@
 title: 可编辑文本
 ---
 
+## hl-edit-info
+
 > 双击文本显示输入框编辑
 
 ### 基本用法
 
-<hl-demo-edit-info/>
-
-```vue
-<script setup>
-function handleChange(val) {
-  console.log(val)
-}
-</script>
-
-<template>
-  <hl-edit-info model-value="test" @change="handleChange" />
-</template>
-```
+<hl-demo-edit-info />
 
 ### 属性
 
-| 属性               | 说明                            | 类型    | 可选值             | 默认值 |
-| ------------------ | ------------------------------- | ------- | ------------------ | ------ | ----- |
-| modelValue/v-model | 显示的值                        | any     | —                  | —      |
-| width              | 容器宽度                        | String  | —                  | 100%   |
-| align              | 对齐方式                        | String  | left/right/center  | left   |
-| editable           | 是否可编辑                      | Boolean | —                  | true   |
-| placeholder        | 值为空时的提示信息              | String  | 没有值时的提示信息 | —      | —     |
-| zeroToEmpty        | 值为0时双击编辑是否置为空字符串 | Boolean | —                  | false  |
-| type               | 文本类型                        | String  | textarea           | input  | input |
-| rows               | 文本域行数                      | Number  | —                  | 3      |
-| emptyValue         | modelValue为空字符串时显示的值  | String  | —                  | ''     |
+| 属性               | 说明                            | 类型    | 可选值            | 默认值   |
+| ------------------ | ------------------------------- | ------- | ----------------- | -------- |
+| modelValue/v-model | 绑定的值                        | any     | —                 | —        |
+| width              | 容器宽度                        | String  | —                 | 100%     |
+| align              | 对齐方式                        | String  | left/right/center | left     |
+| editable           | 是否可编辑                      | Boolean | —                 | true     |
+| placeholder        | 输入框提示信息                  | String  | —                 | 请输入   |
+| triggerInfo        | modelValue为空时触发区域文字    | String  | —                 | 双击编辑 |
+| zeroToEmpty        | 值为0时双击编辑是否置为空字符串 | Boolean | —                 | false    |
 
 ### 事件
 

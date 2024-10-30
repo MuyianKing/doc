@@ -141,6 +141,8 @@ export default defineConfig({
           items: [
             { text: '弹框', link: '/docs/web/hl-ui/dialog' },
             { text: '右击菜单', link: '/docs/web/hl-ui/context-menu' },
+            { text: '下拉菜单', link: '/docs/web/hl-ui/dropdown' },
+            { text: '级联下拉', link: '/docs/web/hl-ui/dropdown-cascader' },
           ],
         },
         {

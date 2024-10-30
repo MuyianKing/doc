@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "@hl/directions": "^0.6.0",
-    "@hl/theme-chalk": "^0.6.3",
+    "@hl/theme-chalk": "^0.7.0-beta",
     "@hl/tyyh": "^0.6.1",
-    "@hl/ui": "0.6.4-beta",
-    "@hl/utils": "0.6.2",
+    "@hl/ui": "^0.7.0-beta",
+    "@hl/utils": "^0.6.2",
     "@iconify/vue": "^4.1.2",
     "@multiavatar/multiavatar": "^1.0.7",
     "@vueuse/core": "^11.1.0",
@@ -24,9 +24,9 @@
     "element-plus": "^2.8.6",
     "js-cookie": "^3.0.5",
     "lodash-es": "^4.17.21",
-    "nanoid": "^5.0.7",
+    "nanoid": "^5.0.8",
     "nprogress": "^0.2.0",
-    "pinia": "^2.2.4",
+    "pinia": "^2.2.5",
     "pinia-plugin-persistedstate": "^4.1.2",
     "validator": "^13.12.0",
     "vue": "^3.5.12",
@@ -47,14 +47,14 @@
     "postcss": "^8.4.47",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^10.0.8",
-    "sass": "1.80.4",
-    "shiki": "^1.22.1",
+    "sass": "1.80.5",
+    "shiki": "^1.22.2",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3",
     "unplugin-auto-import": "^0.18.3",
     "unplugin-vue-components": "^0.27.4",
     "vite": "^5.4.10",
-    "vitepress": "1.4.1"
+    "vitepress": "1.4.2"
   },
   "config": {
     "commitizen": {
