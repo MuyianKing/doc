@@ -114,6 +114,7 @@ export default defineConfig({
             { text: '日期', link: '/docs/web/hl-ui/date' },
             { text: '文本框', link: '/docs/web/hl-ui/input' },
             { text: '下拉框', link: '/docs/web/hl-ui/select' },
+            { text: '远程下拉', link: '/docs/web/hl-ui/select-remote' },
             { text: '单选框', link: '/docs/web/hl-ui/radio' },
             { text: '复选框', link: '/docs/web/hl-ui/checkbox' },
             { text: '上传', link: '/docs/web/hl-ui/upload' },
@@ -155,6 +156,8 @@ export default defineConfig({
           items: [
             { text: '列表页', link: '/docs/web/hl-ui/search' },
             { text: '表单弹框', link: '/docs/web/hl-ui/form-dialog' },
+            { text: 'Grid布局', link: '/docs/web/hl-ui/grid-layout' },
+            { text: '无限滚动', link: '/docs/web/hl-ui/scroll' },
           ],
         },
       ],

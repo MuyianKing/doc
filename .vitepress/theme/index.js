@@ -17,6 +17,8 @@ export default {
 
     app.use(ElementPlus, {
       locale: zhCn,
-    }).use(customecomp).use(hldemo)
+    })
+      .use(customecomp)
+      .use(hldemo)
   },
 }

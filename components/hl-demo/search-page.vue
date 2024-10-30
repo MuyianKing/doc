@@ -16,7 +16,7 @@ const table = reactive({
 
 // 获取数据
 function getData() {
-  table.count = 1
+  table.count = 100
   table.data = [{
     username: '慕易安',
     name: '杨峰',
@@ -44,10 +44,10 @@ const code = `
   <hl-search-page>
     <template #header>
       <el-form-item label="用户名">
-        <el-input v-model="query.username" placeholder="请输入用户名" />
+        <el-input v-model="query.username" placeholder="请输入用户名" @change="search"/>
       </el-form-item>
       <el-form-item label="姓名">
-        <el-input v-model="query.name" placeholder="请输入姓名" />
+        <el-input v-model="query.name" placeholder="请输入姓名" @change="search"/>
       </el-form-item>
       <el-button type="primary" @click="search">
         查询
@@ -66,7 +66,7 @@ const code = `
       </hl-table>
     </template>
 
-    <hl-page v-model:page="query.page" :size="query.limit" :count="table.count" @change="getData" />
+    <hl-page v-model="query.page" :size="query.limit" :count="table.count" @change="getData" />
   </hl-search-page>
 </template>
 <script setup>
@@ -84,7 +84,7 @@ const code = `
 
   // 获取数据
   function getData() {
-    table.count = 1
+    table.count = 100
     table.data = [{
       username: '慕易安',
       name: '杨峰',
@@ -137,7 +137,7 @@ const code = `
         </hl-table>
       </template>
 
-      <hl-page v-model:page="query.page" :size="query.limit" :count="table.count" @change="getData" />
+      <hl-page v-model="query.page" :size="query.limit" :count="table.count" @change="getData" />
     </hl-search-page>
   </custom-code-preview>
 </template>
