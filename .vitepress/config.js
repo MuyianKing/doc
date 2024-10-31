@@ -56,6 +56,9 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/logo.png',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '亮色主题',
+    darkModeSwitchTitle: '深色主题',
     nav: [
       { text: '首页', link: '/' },
       {
@@ -157,7 +160,6 @@ export default defineConfig({
             { text: '列表页', link: '/docs/web/hl-ui/search' },
             { text: '表单弹框', link: '/docs/web/hl-ui/form-dialog' },
             { text: 'Grid布局', link: '/docs/web/hl-ui/grid-layout' },
-            { text: '无限滚动', link: '/docs/web/hl-ui/scroll' },
           ],
         },
       ],
