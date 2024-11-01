@@ -6,7 +6,9 @@ title: Grid布局
 
 ### 基本用法
 
-<hl-demo-grid />
+<client-only>
+  <hl-demo-grid />
+</client-only>
 
 > 当我们改变屏幕尺寸时会发现hl-demo-grid里面的内容列数会自动改变，变化规则由width和min-width控制，代码如下：
 
@@ -33,7 +35,9 @@ function setColumnRow() {
 
 ### 函数方式
 
-<hl-demo-grid-fun />
+<client-only>
+  <hl-demo-grid-fun />
+</client-only>
 
 ### 属性
 

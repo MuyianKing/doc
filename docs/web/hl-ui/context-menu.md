@@ -6,17 +6,23 @@ title: 右击菜单
 
 ### 基础使用
 
-<hl-demo-context-menu/>
+<client-only>
+  <hl-demo-context-menu/>
+</client-only>
 
 ### 绑定数据
 
-<hl-demo-context-menu-data/>
+<client-only>
+  <hl-demo-context-menu-data/>
+</client-only>
 
 > toggle方法接收的参数会出现在click事件抛出来的数据的data属性上
 
 ### 自定义选项
 
-<hl-demo-context-menu-custom/>
+<client-only>
+  <hl-demo-context-menu-custom/>
+</client-only>
 
 hl-context-menu-item组件插槽接收来自options对应索引的配置
 

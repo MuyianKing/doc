@@ -18,8 +18,8 @@ title: 图表
 
 ### 基础用法
 
-<ClientOnly>
+<client-only>
   <hl-demo-charts/>
-</ClientOnly>
+</client-only>
 
 上面的两个图表左边是封装的hl-chart，右边是直接使用echarts，当我们改变页面尺寸时我们会发现hl-chart会自动改变自身的尺寸，右边却不会。
