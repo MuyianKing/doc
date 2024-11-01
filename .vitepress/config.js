@@ -12,9 +12,7 @@ export default defineConfig({
   base: '/doc/',
   vite: {
     resolve: {
-      alias: {
-        ...alias_map,
-      },
+      alias: alias_map,
     },
     ssr: {
       noExternal: ['@hl/ui', '@hl/utils', 'validator', 'element-plus'],
@@ -149,10 +147,6 @@ export default defineConfig({
             { text: '级联下拉', link: '/docs/web/hl-ui/dropdown-cascader' },
             { text: '疑问提示', link: '/docs/web/hl-ui/question-icon' },
           ],
-        },
-        {
-          text: '地图组件',
-          items: [{ text: '地图选点', link: '/docs/web/hl-ui/pointer-select' }],
         },
         {
           text: '布局组件',
