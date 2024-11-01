@@ -29,6 +29,7 @@ jobs:
       # 下载依赖、打包项目
       - name: Install and Build
         run: |
+          yarn add pnpm
           pnpm install
           pnpm build
 
