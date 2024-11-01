@@ -38,4 +38,4 @@ title: 表单项
 | rules       | 自定义校验规则                                                                                     | Object/Array | —          | null   |
 | info        | 提示信息：必填校验会自动根据表单类型判断是“请选择”还是“请输入”，当无法正确判断时可以手动设置改属性 | String       | —          | —      |
 | labelWidth  | 表单标签长度                                                                                       | String       | fit-自适应 | —      |
-| minCountMsg | 配置校验规则minCount使用，不满足minCount的提示信息                                                 | String       | —          | —      |
+| minCountMsg | 配合校验规则minCount使用，不满足minCount的提示信息                                                 | String       | —          | —      |

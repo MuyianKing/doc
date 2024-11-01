@@ -34,3 +34,13 @@ function setColumnRow() {
 ### 函数方式
 
 <hl-demo-grid-fun />
+
+### 属性
+
+| 属性      | 说明               | 类型   | 可选值 | 默认值 |
+| --------- | ------------------ | ------ | ------ | ------ |
+| width     | 内容块宽度         | Number | —      | —      |
+| minWidth  | 内容块最小宽度     | Number | —      | 0      |
+| gap       | 内容块之间的间隙   | Number | —      | 10     |
+| rowGap    | 内容块行之间的间隙 | Number | —      | 10     |
+| columnGap | 内容块列之间的间隙 | Number | —      | 10     |
