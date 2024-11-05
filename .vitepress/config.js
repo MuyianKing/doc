@@ -67,6 +67,7 @@ export default defineConfig({
         text: '工具包',
         items: [
           { text: '@hl/utils', link: '/docs/utils/home' },
+          { text: '@hl/hooks', link: '/docs/hooks/home' },
         ],
       },
       {
