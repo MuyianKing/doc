@@ -1,10 +1,8 @@
 <script setup>
-import { login } from '@server/tyyh'
 import copy from 'copy-text-to-clipboard'
 import { ElMessage } from 'element-plus'
-
 import { codeToHtml } from 'shiki'
-import { onMounted, watch } from 'vue'
+import { watch } from 'vue'
 
 const props = defineProps({
   code: {

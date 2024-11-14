@@ -104,6 +104,7 @@ export default defineConfig({
           items: [
             { text: '图标', link: '/docs/web/hl-ui/icon' },
             { text: '图标选择', link: '/docs/web/hl-ui/icon-select' },
+            { text: '所有图标', link: '/docs/web/hl-ui/icon-all' },
             { text: '按钮', link: '/docs/web/hl-ui/button' },
             { text: '预设按钮', link: '/docs/web/hl-ui/button-type' },
             { text: '个性标题', link: '/docs/web/hl-ui/block-title' },

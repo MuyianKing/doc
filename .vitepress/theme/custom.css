@@ -114,3 +114,11 @@ html {
     color: white;
   }
 }
+
+.content{
+  padding-bottom: 10px !important;
+}
+
+.VPDocFooter{
+  margin-top: 10px !important;
+}
