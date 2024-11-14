@@ -15,7 +15,7 @@ export default defineConfig({
       alias: alias_map,
     },
     ssr: {
-      noExternal: ['@hl/ui', '@hl/utils', 'validator', 'element-plus'],
+      noExternal: true,
     },
     plugins: [
       AutoImport({

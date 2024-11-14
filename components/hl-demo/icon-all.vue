@@ -12,6 +12,7 @@ const {
   getData,
   table_data,
 } = useList({
+  autoUpdate: false,
   query: {
     query: '',
     limit: 200,
@@ -26,7 +27,11 @@ function handleCopy(icon) {
 
 function handleMore() {
   if (page_query.page * page_query.limit < table_data.count) {
-    // page_query.page++
+    page_query.page++
+
+    getData({
+      append: true,
+    })
   }
 }
 </script>
@@ -66,7 +71,7 @@ function handleMore() {
 }
 
 .icon-table {
-  height: calc(100vh - 400px) !important;
+  height: calc(100vh - 446px) !important;
   overflow-y: auto;
 }
 </style>
