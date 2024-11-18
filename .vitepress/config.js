@@ -45,6 +45,11 @@ export default defineConfig({
       }),
     ],
     css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
       postcss: {
         plugins: [
           tailwindcss,
@@ -91,6 +96,9 @@ export default defineConfig({
             { text: 'getCanUseValue', link: '/docs/utils/getCanUseValue' },
           ],
         },
+      ],
+      '/docs/hooks': [
+        { text: 'useList', link: '/docs/hooks/use-list' },
       ],
       '/docs/web/hl-ui/': [
         {

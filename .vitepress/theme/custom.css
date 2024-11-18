@@ -122,3 +122,7 @@ html {
 .VPDocFooter{
   margin-top: 10px !important;
 }
+
+svg{
+  display: inline !important;
+}

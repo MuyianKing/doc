@@ -13,7 +13,7 @@ title: 列表页
 <hl-demo-search-page/>
 
 ::: warning 提示
-虽然hl-search-page已经帮我们减少了页面的结构布局代码，但是在开发中我们大概率还是用不到hl-search-page，因为示例代码中依然存在很多重复性代码，对此@hl/hooks包中的useList函数又对hl-search-page封装了一层，大大减少了我们的重复性代码。
+虽然hl-search-page已经帮我们减少了页面的结构布局代码，但是在开发中我们大概率还是用不到hl-search-page，因为示例代码中依然存在很多重复性代码，对此@hl/hooks包中的[useList](/docs/hooks/use-list.html)函数又对hl-search-page封装了一层，大大减少了我们的重复性代码。
 :::
 
 ### 插槽
