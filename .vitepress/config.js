@@ -9,7 +9,7 @@ const { alias_map } = useAlias()
 export default defineConfig({
   title: '华龙通信',
   description: '前端物料文档',
-  base: '/doc/',
+  base: '/docs/',
   vite: {
     resolve: {
       alias: alias_map,
@@ -65,6 +65,10 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       {
+        text: '面试题',
+        link: '/docs/interview/home',
+      },
+      {
         text: '开发规范',
         link: '/docs/rules/web/outline',
       },
@@ -81,6 +85,9 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/docs/interview': [
+        { text: '轮播', link: '/docs/interview/home' },
+      ],
       '/docs/utils': [
         { text: '开始', link: '/docs/utils/home' },
         {

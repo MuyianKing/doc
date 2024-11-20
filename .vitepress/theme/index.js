@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 
 import customecomp from '../../components/custom/index'
 import hldemo from '../../components/hl-demo/index'
+import hliv from '../../components/interview/index'
 import './custom.css'
 import './index.css'
 import 'element-plus/dist/index.css'
@@ -20,5 +21,6 @@ export default {
     })
       .use(customecomp)
       .use(hldemo)
+      .use(hliv)
   },
 }
