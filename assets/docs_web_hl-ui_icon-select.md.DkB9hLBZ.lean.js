@@ -1,0 +1,8 @@
+import{aw as t,t as l,v as a,S as s,U as o,aU as c,ai as i,q as p}from"./chunks/framework.CbHxagKl.js";const v=JSON.parse('{"title":"图标选择","description":"","frontmatter":{"title":"图标选择"},"headers":[],"relativePath":"docs/web/hl-ui/icon-select.md","filePath":"docs/web/hl-ui/icon-select.md","lastUpdated":1730096765000}'),r={name:"docs/web/hl-ui/icon-select.md"};function d(h,e,u,m,b,f){const n=i("hl-demo-icon-select");return p(),l("div",null,[e[0]||(e[0]=a("h2",{id:"hl-icon-select",tabindex:"-1"},[s("hl-icon-select "),a("a",{class:"header-anchor",href:"#hl-icon-select","aria-label":'Permalink to "hl-icon-select"'},"​")],-1)),e[1]||(e[1]=a("h3",{id:"基础用法",tabindex:"-1"},[s("基础用法 "),a("a",{class:"header-anchor",href:"#基础用法","aria-label":'Permalink to "基础用法"'},"​")],-1)),o(n),e[2]||(e[2]=c(`<h3 id="全局配置" tabindex="-1">全局配置 <a class="header-anchor" href="#全局配置" aria-label="Permalink to &quot;全局配置&quot;">​</a></h3><blockquote><p>因为组件不提供图标服务，所以需要全局配置获取图标的方法</p></blockquote><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// vue</span></span>
+<span class="line"><span>&lt;hl-config-provider :custom-config&gt;</span></span>
+<span class="line"><span>  &lt;hl-icon-select v-model=&quot;icon&quot; /&gt;</span></span>
+<span class="line"><span>&lt;/hl-config-provider&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const customConfig = {</span></span>
+<span class="line"><span>  getIcons:Function,</span></span>
+<span class="line"><span>}</span></span></code></pre></div>`,3))])}const k=t(r,[["render",d]]);export{v as __pageData,k as default};
