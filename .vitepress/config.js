@@ -9,7 +9,7 @@ const { alias_map } = useAlias()
 export default defineConfig({
   title: '华龙通信',
   description: '前端物料文档',
-  base: '/docs/',
+  base: '/doc/',
   vite: {
     resolve: {
       alias: alias_map,
