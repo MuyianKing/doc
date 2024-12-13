@@ -4,6 +4,7 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import DefaultTheme from 'vitepress/theme'
 
 import customecomp from '../../components/custom/index'
+import hlh5 from '../../components/h5/index'
 import hldemo from '../../components/hl-demo/index'
 import hliv from '../../components/interview/index'
 import './custom.css'
@@ -22,5 +23,6 @@ export default {
       .use(customecomp)
       .use(hldemo)
       .use(hliv)
+      .use(hlh5)
   },
 }

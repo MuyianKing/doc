@@ -85,3 +85,54 @@ interface returndata {
 - 首先需要一个能够获取到当前改动行新数据的方法，默认会调用传入的server方法，参数默认为{id:'xxx'}
 - 如果server不支持获取当前行最新数据，则么需要再定义一个专门的方法获取，通过oneServer传入，参数默认也是{id:'xxx'}
 - 大部分情况下我们都是根据id获取数据的，如果存在其他情况可以通过oneServerKey指定主键字段名
+
+```vue
+<script setup>
+import { useList } from '@hl/hooks'
+import { getList } from '@server/user'
+
+const {
+  HlListPage,
+  query,
+  table_data,
+  updateOne,
+} = useList({
+  query: {
+    keyword: '',
+  },
+  server: getList,
+})
+
+const edit_data = ref(null)
+function handleEdit(row) {
+  edit_data.value = row
+}
+
+// 更新数据
+function handleRefresh() {
+  updateOne(edit_data)
+}
+</script>
+
+<template>
+  <hl-list-page>
+    <template #search>
+      <hl-form-item label="关键字">
+        <hl-input v-model="query.keyword" />
+      </hl-form-item>
+    </template>
+    <template #table>
+      <hl-table :data="table_data.data">
+        <hl-table-column type="index" />
+        <hl-table-column label="姓名" prop="name" />
+        <hl-table-column label="操作">
+          <template #default="{ row }">
+            <hl-edit-button @click="handleEdit(row)" />
+          </template>
+        </hl-table-column>
+      </hl-table>
+    </template>
+    <edit-comp @refresh="handleRefresh" />
+  </hl-list-page>
+</template>
+```

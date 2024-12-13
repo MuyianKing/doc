@@ -4,7 +4,7 @@ title: 面试题
 
 ## 轮播
 
-<a href="./assets/lunbo.json" target="_blank">轮播数据</a>
+<a href="/doc/lunbo.json" target="_blank">轮播数据</a>
 
 ### 效果
 

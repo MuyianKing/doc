@@ -100,7 +100,11 @@ html {
   --color-warning: #ff8e56;
   --color-danger: #ff5656;
   --color-info: #babdc6;
+}
 
+:root{
+  --vp-c-text-2:#5e6d82;
+  --vp-c-text-1:#555;
 }
 
 .dark {

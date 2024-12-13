@@ -12,14 +12,17 @@ title: 图标选择
 
 > 因为组件不提供图标服务，所以需要全局配置获取图标的方法
 
-```text
-// vue
-<hl-config-provider :custom-config>
-  <hl-icon-select v-model="icon" />
-</hl-config-provider>
-
+```vue
+<script setup>
 const customConfig = {
-  getIcons:Function,
+  getIcons: Function,
 }
+</script>
+
+<template>
+  <hl-config-provider :custom-config>
+    <hl-icon-select v-model="icon" />
+  </hl-config-provider>
+</template>
 
 ```

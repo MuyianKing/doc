@@ -80,8 +80,11 @@ export default defineConfig({
         ],
       },
       {
-        text: '中后台',
-        items: [{ text: 'Hl-UI', link: '/docs/web/hl-ui/home' }],
+        text: 'UI',
+        items: [
+          { text: 'Hl-UI', link: '/docs/web/hl-ui/home' },
+          { text: 'Hl-H5', link: '/docs/h5/home' },
+        ],
       },
     ],
     sidebar: {
@@ -106,6 +109,48 @@ export default defineConfig({
       ],
       '/docs/hooks': [
         { text: 'useList', link: '/docs/hooks/use-list' },
+      ],
+      '/docs/h5': [
+        {
+          text: '基础组件',
+          items: [
+            { text: '按钮', link: '/docs/h5/button' },
+            { text: '头像', link: '/docs/h5/avatar' },
+            { text: '分割线', link: '/docs/h5/divider' },
+            { text: '图标', link: '/docs/h5/icon' },
+            { text: '表格', link: '/docs/h5/table' },
+          ],
+        },
+        {
+          text: '表单组件',
+          items: [
+            { text: '表单', link: '/docs/h5/form' },
+            { text: '输入框', link: '/docs/h5/input' },
+            { text: '下拉框', link: '/docs/h5/select' },
+            { text: '单选框', link: '/docs/h5/radio' },
+            { text: '复选框', link: '/docs/h5/checkbox' },
+            { text: '日期', link: '/docs/h5/date' },
+            { text: '上传', link: '/docs/h5/upload' },
+          ],
+        },
+        {
+          text: '文件组件',
+          items: [
+            { text: '图片', link: '/docs/h5/image' },
+            { text: '视频', link: '/docs/h5/video' },
+            { text: '音频', link: '/docs/h5/audio' },
+            { text: '文件', link: '/docs/h5/file' },
+            { text: '所有文件', link: '/docs/h5/preview' },
+          ],
+        },
+        {
+          text: '导航组件',
+          items: [
+            { text: '导航栏', link: '/docs/h5/top' },
+            { text: 'Tabbar栏', link: '/docs/h5/tabbar' },
+            { text: '列表', link: '/docs/h5/list' },
+          ],
+        },
       ],
       '/docs/web/hl-ui/': [
         {

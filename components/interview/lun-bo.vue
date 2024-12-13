@@ -1,6 +1,6 @@
 <script setup>
 import { useEventListener } from '@vueuse/core'
-import data from '../../docs/interview/assets/lunbo.json'
+import data from './lunbo.json'
 
 const count = ref(0)
 
@@ -70,6 +70,8 @@ async function handleMouseup() {
     offset.value > 0 ? count.value-- : count.value++
   }
   offset.value = 0
+
+  handleDisabled()
 }
 
 const _style = computed(() => {
