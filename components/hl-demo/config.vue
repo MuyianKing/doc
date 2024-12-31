@@ -7,10 +7,8 @@ const customConfig = {
 
 const code = `
 <template>
-  <custom-code-preview :code>
-      <hl-config-provider :custom-config />
-    </custom-code-preview>
-  </template>
+  <hl-config-provider :custom-config />
+</template>
 <script setup>
   const customConfig = {
     uploadFile: () => { },

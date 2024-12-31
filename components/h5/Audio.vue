@@ -12,7 +12,7 @@ const file = {
   <div class="p-4">
     <hl-audio :file />
     <hl-audio :file class="mt-4" />
-  </div>>
+  </div>
 </template>
 
 <style lang='scss' scoped></style>
